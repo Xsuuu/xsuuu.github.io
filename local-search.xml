@@ -4,16 +4,41 @@
   
   
   <entry>
-    <title>Java-SE学习笔记10</title>
-    <link href="/2025/08/22/Java-SE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B010/"/>
-    <url>/2025/08/22/Java-SE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B010/</url>
+    <title>前端三件套笔记补充</title>
+    <link href="/2026/01/27/%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97%E7%AC%94%E8%AE%B0%E8%A1%A5%E5%85%85/"/>
+    <url>/2026/01/27/%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97%E7%AC%94%E8%AE%B0%E8%A1%A5%E5%85%85/</url>
     
-    <content type="html"><![CDATA[]]></content>
+    <content type="html"><![CDATA[<blockquote><p>用<p>空一行   </p><p>用<br>在不产生一个新段落的情况下换行</p><p>用<hr>画一条水平线分割，可以用color，width，size，align调整颜色，宽度，高度，对齐方式</p><p>在<img>中alt是图片未加载出来的提示，title是鼠标悬停时的提示</p><p><img src="/img/cr/%E4%B8%89%E4%BB%B6%E5%A5%97/1.png"></p></blockquote>]]></content>
     
     
     <categories>
       
-      <category>Java SE</category>
+      <category>三件套</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Note</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>前端路线规划</title>
+    <link href="/2025/10/20/%E5%89%8D%E7%AB%AF%E8%B7%AF%E7%BA%BF%E8%A7%84%E5%88%92/"/>
+    <url>/2025/10/20/%E5%89%8D%E7%AB%AF%E8%B7%AF%E7%BA%BF%E8%A7%84%E5%88%92/</url>
+    
+    <content type="html"><![CDATA[<h3 id="1-基础知识（前端入门阶段）"><a href="#1-基础知识（前端入门阶段）" class="headerlink" title="1. 基础知识（前端入门阶段）"></a><strong>1. 基础知识（前端入门阶段）</strong></h3><p>你首先需要掌握的核心技术是：<strong>HTML、CSS 和 JavaScript</strong>。这三者是前端开发的基础，几乎所有职位都要求你掌握。</p><h4 id="学习目标："><a href="#学习目标：" class="headerlink" title="学习目标："></a>学习目标：</h4><ul><li><strong>HTML5</strong>：理解HTML标签的基本结构、语义化标签的使用（如<code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>）。</li><li><strong>CSS3</strong>：掌握页面布局（如<strong>Flexbox</strong>、<strong>Grid</strong>），响应式布局（<strong>Media Queries</strong>），并熟悉常用的CSS属性（如<code>margin</code>, <code>padding</code>, <code>border</code>, <code>font</code>）。</li><li><strong>JavaScript</strong>：<ul><li>掌握基本语法（变量、数据类型、运算符、函数、对象、数组、循环）。</li><li>理解DOM操作、事件处理、AJAX请求和异步编程（<code>Promise</code>、<code>async/await</code>）。</li><li>熟悉浏览器兼容性和性能优化。</li></ul></li></ul><h4 id="学习时间："><a href="#学习时间：" class="headerlink" title="学习时间："></a>学习时间：</h4><ul><li><strong>HTML&#x2F;CSS</strong>：2-3周</li><li><strong>JavaScript</strong>：2个月（理论+实战）</li></ul><hr><h3 id="2-前端框架与工具（中级阶段）"><a href="#2-前端框架与工具（中级阶段）" class="headerlink" title="2. 前端框架与工具（中级阶段）"></a><strong>2. 前端框架与工具（中级阶段）</strong></h3><p>大部分职位要求你掌握至少一个前端框架，而现代开发中最流行的是 <strong>Vue</strong> 和 <strong>React</strong>。你也提到了一些职位涉及 <strong>Vue</strong> 和 <strong>uniapp</strong>（这也是一个跨平台开发框架）。</p><h4 id="学习目标：-1"><a href="#学习目标：-1" class="headerlink" title="学习目标："></a>学习目标：</h4><ul><li><strong>Vue.js</strong>：<ul><li>掌握基本语法：模板语法、指令、生命周期、计算属性和方法。</li><li>学习 <strong>Vuex</strong> 状态管理和 <strong>Vue Router</strong> 路由管理。</li><li>完成一个简单的Vue项目，掌握前后端数据交互、组件化开发。</li></ul></li><li><strong>React.js</strong>（推荐学习）：<ul><li>理解React组件、状态管理（useState、useEffect）、props、hooks（如useState、useEffect）。</li><li>学习 <strong>React Router</strong> 和 <strong>Context API</strong>（或 <strong>Redux</strong>）进行状态管理。</li><li>掌握组件化开发和组件复用。</li><li>完成一个简单的React项目，掌握前后端数据交互。</li></ul></li><li><strong>Vue 3 &amp; Composition API</strong>（可选）：<ul><li>如果你想开发更现代化的Vue应用，可以学习Vue 3的新特性，特别是 <strong>Composition API</strong> 和 <strong>Suspense</strong>。</li></ul></li><li><strong>工具链</strong>：<ul><li>学习 <strong>Git</strong>（版本控制）和 <strong>Vite</strong>（快速构建工具）。许多职位都要求你熟悉Vite（代替webpack）。</li><li>熟悉 <strong>NPM&#x2F;Yarn</strong>（包管理工具）和 <strong>ESLint</strong>（代码规范）。</li><li>掌握 <strong>Webpack</strong> 或 <strong>Vite</strong> 构建工具，了解模块化和打包。</li></ul></li></ul><h4 id="学习时间：-1"><a href="#学习时间：-1" class="headerlink" title="学习时间："></a>学习时间：</h4><ul><li><strong>Vue.js 或 React.js</strong>：2个月</li><li><strong>Vuex&#x2F;Redux 状态管理</strong>：1个月</li><li><strong>Git 和 Vite</strong>：1个月</li></ul><hr><h3 id="3-跨平台开发（基础准备阶段）"><a href="#3-跨平台开发（基础准备阶段）" class="headerlink" title="3. 跨平台开发（基础准备阶段）"></a><strong>3. 跨平台开发（基础准备阶段）</strong></h3><p>既然你未来有跨平台App开发的目标，了解一些跨平台框架的基础是非常有帮助的。你可以选择学习 <strong>uniapp</strong> 或 <strong>Flutter</strong> 来为未来的独立开发打下基础。</p><h4 id="学习目标：-2"><a href="#学习目标：-2" class="headerlink" title="学习目标："></a>学习目标：</h4><ul><li><strong>uniapp</strong>：<ul><li>了解uniapp的基础语法和如何通过uniapp实现跨平台开发（可以同时构建iOS、Android、Web、小程序等）。</li><li>熟悉常用的uniapp组件和API，掌握如何进行页面布局、路由管理、数据绑定等。</li></ul></li><li><strong>Flutter（可选）</strong>：<ul><li>学习 <strong>Dart</strong> 语言基础，并理解如何使用 <strong>Flutter</strong> 开发跨平台应用。</li><li>了解Flutter的UI框架，如何通过Flutter构建响应式UI。</li></ul></li></ul><h4 id="学习时间：-2"><a href="#学习时间：-2" class="headerlink" title="学习时间："></a>学习时间：</h4><ul><li><strong>uniapp</strong>：1-2个月</li><li><strong>Flutter</strong>：2个月（可选，若未来有更强的跨端开发需求）</li></ul><hr><h3 id="4-后端基础与API交互（增强能力）"><a href="#4-后端基础与API交互（增强能力）" class="headerlink" title="4. 后端基础与API交互（增强能力）"></a><strong>4. 后端基础与API交互（增强能力）</strong></h3><p>一些职位要求你有基础的后端知识和API接口的交互能力。了解后端基础对你以后能独立开发App是很有帮助的。</p><h4 id="学习目标：-3"><a href="#学习目标：-3" class="headerlink" title="学习目标："></a>学习目标：</h4><ul><li><strong>API</strong>：学习如何与后端进行数据交互，使用 <strong>Fetch</strong> 或 <strong>Axios</strong> 进行 API 请求，处理返回的数据。</li><li><strong>Node.js（可选）</strong>：学习基本的 <strong>Node.js</strong> 和 <strong>Express</strong> 框架，用来理解如何处理简单的后端API。</li></ul><h4 id="学习时间：-3"><a href="#学习时间：-3" class="headerlink" title="学习时间："></a>学习时间：</h4><ul><li><strong>API交互</strong>：1个月</li><li><strong>Node.js 和 Express（可选）</strong>：2个月</li></ul><hr><h3 id="5-实践与项目经验"><a href="#5-实践与项目经验" class="headerlink" title="5. 实践与项目经验"></a><strong>5. 实践与项目经验</strong></h3><p>通过项目实战，帮助你深入理解所学的技术，并提升实际开发能力。选择一些小项目来巩固知识并为简历积累经验。</p><h4 id="项目建议："><a href="#项目建议：" class="headerlink" title="项目建议："></a>项目建议：</h4><ul><li><strong>Todo List 或 Blog</strong>：使用Vue&#x2F;React构建一个基本的Todo List或博客应用，练习前后端数据交互、页面布局和路由。</li><li><strong>跨平台小项目</strong>：用 <strong>uniapp</strong> 或 <strong>Flutter</strong> 做一个简单的跨平台APP，锻炼你后续独立开发App的能力。</li><li><strong>响应式网页</strong>：设计一个响应式网站，兼容不同设备和浏览器，提升你布局和适配的技能。</li></ul><h4 id="学习时间：-4"><a href="#学习时间：-4" class="headerlink" title="学习时间："></a>学习时间：</h4><ul><li><strong>小项目</strong>：3-4个月</li></ul><hr><h3 id="6-总结与调整"><a href="#6-总结与调整" class="headerlink" title="6. 总结与调整"></a><strong>6. 总结与调整</strong></h3><ul><li><strong>整体学习时间</strong>：建议你在 <strong>6-9个月</strong> 内，逐步完成上述内容的学习，前提是你能全力投入。</li><li><strong>实习&#x2F;工作准备</strong>：重点提升你的Vue&#x2F;React技能，并熟悉Git、Vite等工具。你可以通过参与一些开源项目或自己做项目来丰富经验。</li><li><strong>留有选择的余地</strong>：在后端基础和跨平台开发上可以稍微留白，后期再根据兴趣深入学习。</li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>Other</category>
       
     </categories>
     
@@ -258,8 +283,14 @@
     <link href="/2025/07/15/%E5%8D%9A%E5%AE%A2%E6%97%A5%E5%B8%B8%E6%9B%B4%E6%96%B0%E6%8C%87%E4%BB%A4/"/>
     <url>/2025/07/15/%E5%8D%9A%E5%AE%A2%E6%97%A5%E5%B8%B8%E6%9B%B4%E6%96%B0%E6%8C%87%E4%BB%A4/</url>
     
-    <content type="html"><![CDATA[<p>指令集合：</p><figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs dts">hexo cl&amp;<span class="hljs-variable">&amp;hexo</span> g&amp;<span class="hljs-variable">&amp;hexo</span> s<br>(清除缓存+生成更改+测试网页)<br>hexo d<br>(推送到服务器)<br></code></pre></td></tr></table></figure><p>记得ctrl+f5强制刷新</p><p>参数运用：</p><p><img src="/img/cr/1.jpg"></p>]]></content>
+    <content type="html"><![CDATA[<p>指令集合：</p><figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs dts">npx hexo cl&amp;<span class="hljs-variable">&amp;npx</span> hexo g&amp;<span class="hljs-variable">&amp;npx</span> hexo s<br>(清除缓存+生成更改+测试网页)<br>npx hexo d<br>(推送到服务器)<br></code></pre></td></tr></table></figure><p>记得ctrl+f5强制刷新</p><p>参数运用：</p><p><img src="/img/cr/1.jpg"></p>]]></content>
     
+    
+    <categories>
+      
+      <category>Others</category>
+      
+    </categories>
     
     
     <tags>
