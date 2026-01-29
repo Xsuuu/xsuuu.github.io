@@ -18,24 +18,24 @@
   <meta name="author" content="xsuuu">
   <meta name="keywords" content="">
   
-    <meta name="description" content="异常 异常指的是程序在执行过程中，出现的非正常的情况，最终会导致JVM的非正常停止 在Java等面向对象的编程语言中，异常本身是一个类，产生异常就是创建异常对象并抛出了一个异常对象(包含了异常产生的内容、原因和位置)。java处理异常的方式是中断出来 异常指的并不是语法错误，语法错了，编译不通过，不会产生字节码文件，根本不能运行  处理异常的逻辑： 抛出异常throws：  首先必须对方法传递过来">
+    <meta name="description" content="Collections 123Collections.addAll(array,&quot;a&quot;,&quot;b&quot;,&quot;c&quot;);&#x2F;&#x2F;往集合中添加一些元素Collections.shuffle(array);&#x2F;&#x2F;打乱集合顺序Collections.sort(array);&#x2F;&#x2F;将集合中的元素按照默认规则进行排序，默认是升序，静态方法，只能传List集合，不能传Se">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java-SE学习笔记8">
-<meta property="og:url" content="https://xsuuu.github.io/2025/08/08/Java-SE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B08/index.html">
+<meta property="og:title" content="Java-SE学习笔记4">
+<meta property="og:url" content="https://xsuuu.github.io/2025/08/07/Java-SE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04/index.html">
 <meta property="og:site_name" content="xsuuu&#39;s home">
-<meta property="og:description" content="异常 异常指的是程序在执行过程中，出现的非正常的情况，最终会导致JVM的非正常停止 在Java等面向对象的编程语言中，异常本身是一个类，产生异常就是创建异常对象并抛出了一个异常对象(包含了异常产生的内容、原因和位置)。java处理异常的方式是中断出来 异常指的并不是语法错误，语法错了，编译不通过，不会产生字节码文件，根本不能运行  处理异常的逻辑： 抛出异常throws：  首先必须对方法传递过来">
+<meta property="og:description" content="Collections 123Collections.addAll(array,&quot;a&quot;,&quot;b&quot;,&quot;c&quot;);&#x2F;&#x2F;往集合中添加一些元素Collections.shuffle(array);&#x2F;&#x2F;打乱集合顺序Collections.sort(array);&#x2F;&#x2F;将集合中的元素按照默认规则进行排序，默认是升序，静态方法，只能传List集合，不能传Se">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://xsuuu.github.io/img/bg/9.jpg">
-<meta property="article:published_time" content="2025-08-08T12:35:41.268Z">
-<meta property="article:modified_time" content="2025-08-11T07:45:14.869Z">
+<meta property="og:image" content="https://xsuuu.github.io/img/bg/5.jpg">
+<meta property="article:published_time" content="2025-08-07T11:37:43.977Z">
+<meta property="article:modified_time" content="2026-01-28T09:45:32.872Z">
 <meta property="article:author" content="xsuuu">
 <meta property="article:tag" content="Note">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://xsuuu.github.io/img/bg/9.jpg">
+<meta name="twitter:image" content="https://xsuuu.github.io/img/bg/5.jpg">
   
   
   
-  <title>Java-SE学习笔记8 - xsuuu&#39;s home</title>
+  <title>Java-SE学习笔记4 - xsuuu&#39;s home</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -213,13 +213,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/bg/9.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/img/bg/5.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Java-SE学习笔记8"></span>
+            <span id="subtitle" data-typed-text="Java-SE学习笔记4"></span>
           
         </div>
 
@@ -230,8 +230,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-08-08 20:35" pubdate>
-           2025 年 08 月 08 日 , 晚上 08:35 , 星期五
+        <time datetime="2025-08-07 19:37" pubdate>
+           2025 年 08 月 07 日 , 19:37 , 星期四
         </time>
       </span>
     
@@ -243,7 +243,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          1k 字
+          1.9k 字
         
       </span>
     
@@ -255,7 +255,7 @@
         
         
           <!-- compatible with older versions-->
-          9 分钟
+          16 分钟
         
       </span>
     
@@ -292,12 +292,68 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Java-SE学习笔记8</h1>
+            <h1 id="seo-header">Java-SE学习笔记4</h1>
             
             
               <div class="markdown-body">
                 
-                <h5 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h5><blockquote>
+                <h5 id="Collections"><a href="#Collections" class="headerlink" title="Collections"></a>Collections</h5><blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">Collections.addAll(array,<span class="hljs-string">&quot;a&quot;</span>,<span class="hljs-string">&quot;b&quot;</span>,<span class="hljs-string">&quot;c&quot;</span>);<span class="hljs-comment">//往集合中添加一些元素</span><br>Collections.shuffle(array);<span class="hljs-comment">//打乱集合顺序</span><br>Collections.sort(array);<span class="hljs-comment">//将集合中的元素按照默认规则进行排序，默认是升序，静态方法，只能传List集合，不能传Set集合</span><br></code></pre></td></tr></table></figure>
+
+<p>sort被排序的集合里边存储的元素，必须实现Comparable，重写接口中的方法compareTo定义排序的规则</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Person</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Comparable</span>&lt;Person&gt; &#123;<br>	<span class="hljs-meta">@Override</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">compareTo</span><span class="hljs-params">(Person o)</span> &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.getAge() - o.getAge();<span class="hljs-comment">//年龄升序排序</span><br>        <span class="hljs-comment">//return o.getAge() - this.getAge();//年龄降序排序</span><br>    &#125;<br>&#125;<span class="hljs-comment">//别忘了重写toString方法</span><br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>Comparable</strong>:自己和别人比较，自己需要实现Comparable接口，重写比较的规则compareTo方法</p>
+<p><strong>Comparator</strong>:相当于找一个第三方的裁判，比较两个</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs java">Collections.sort(array, <span class="hljs-keyword">new</span> <span class="hljs-title class_">Comparator</span>&lt;Integer&gt;() &#123;<br>            <span class="hljs-meta">@Override</span><br>            <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">compare</span><span class="hljs-params">(Integer o1, Integer o2)</span> &#123;<br>                <span class="hljs-keyword">return</span> o1-o2;<span class="hljs-comment">//升序</span><br>                <span class="hljs-comment">//return o1 - o2;//降序</span><br>            &#125;<br>        &#125;);<span class="hljs-comment">//也可以排序自定义类</span><br><br><span class="hljs-meta">@Override</span><br><span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">compare</span><span class="hljs-params">(Person o1, Person o2)</span> &#123;<br>                <span class="hljs-type">int</span> <span class="hljs-variable">result</span> <span class="hljs-operator">=</span> o1.getAge()-o2.getAge();<span class="hljs-comment">//升序</span><br>                <span class="hljs-comment">//return o1 - o2;//降序</span><br>                <span class="hljs-keyword">if</span>(result == <span class="hljs-number">0</span>)&#123;<br>                    <span class="hljs-keyword">return</span> o1.getName().charAt(<span class="hljs-number">0</span>) - o2.getName().charAt(<span class="hljs-number">0</span>);<br>                &#125;<span class="hljs-keyword">else</span>&#123;<br>                    <span class="hljs-keyword">return</span> result;<br>                &#125;<br>            &#125;<br></code></pre></td></tr></table></figure></blockquote>
+<h5 id="Map集合"><a href="#Map集合" class="headerlink" title="Map&lt;K,V&gt;集合"></a>Map&lt;K,V&gt;集合</h5><blockquote>
+<h5 id="Map集合-1"><a href="#Map集合-1" class="headerlink" title="Map集合"></a>Map集合</h5><blockquote>
+<p>1.双列集合，一个元素包含两个值(key,value)，key和value一一对应</p>
+<p>2.key和value的数据类型可以相同，可以不同；key值不允许重复，value值可以重复</p>
+<p>3.Map集合保证key是唯一的：作为key的元素，必须重写hashCode和equals方法，以保证key唯一</p>
+</blockquote>
+<h5 id="HashMap集合"><a href="#HashMap集合" class="headerlink" title="HashMap集合"></a>HashMap集合</h5><blockquote>
+<p>1.底层是哈希表，查询速度特别快，jdk1.8前后：数组＋单向链表&#x2F;红黑树(链表的长度超过8):提高查询的速度</p>
+<p>2.无序的集合，存储和取出元素的顺序有可能不一致</p>
+<p>3.HashSet就是只有key参数的HashMap,所以他的参数不允许重复</p>
+</blockquote>
+<p><strong>HashTable</strong>:不能存储null值和null键，和Vector一样，再jdk1.2版本之后被更先进的集合(HashMap，ArrayList)取代了，但是Hashtable的子类Properties依然活跃在历史舞台</p>
+<p>properties集合是唯一和IO流相结合的集合</p>
+<h5 id="LinkedHashMap"><a href="#LinkedHashMap" class="headerlink" title="LinkedHashMap"></a>LinkedHashMap</h5><blockquote>
+<p>1.底层是哈希表＋链表(保证迭代的顺序)</p>
+<p>2.有序的集合，存储和取出元素的顺序是一致的</p>
+<p>3.和HashMap集合相似的，LinkedHashSet是只有key参数的LinkedHashMap，他的参数也不允许重复</p>
+</blockquote>
+<p><img src="/img/cr/Java-SE/54.png" srcset="/img/loading.gif" lazyload></p>
+<p>存储键值对时，key不重复直接存入，key重复替代原有value值</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">Map&lt;Integer,String&gt; map =<span class="hljs-keyword">new</span> <span class="hljs-title class_">HashMap</span>&lt;&gt;();<br></code></pre></td></tr></table></figure>
+
+<p>键值对数据类型最好用包装类，因为取出时可能是null值，不是包装类就会产生空指针异常</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java">Set&lt;Integer&gt; set = map.keySet();<br>Iterator&lt;Integer&gt; itrt = set.iterator();<br><span class="hljs-keyword">while</span>(itrt.hasNext())&#123;<br>     <span class="hljs-type">Integer</span> <span class="hljs-variable">key</span> <span class="hljs-operator">=</span> itrt.next();<br>     System.out.println(map.get(key));<br>&#125;<br><span class="hljs-keyword">for</span>(Integer i:set) &#123;<br>     <span class="hljs-type">String</span> <span class="hljs-variable">value</span> <span class="hljs-operator">=</span> map.get(i);<br>     System.out.println(value);<br>&#125;<span class="hljs-comment">//可使用Iterator和增强for遍历</span><br></code></pre></td></tr></table></figure>
+
+<p>1.使用Map集合中的方法keySet()，把Map集合中所有的key取出存储到一个Set集合中</p>
+<p>2.遍历Set集合为Map集合的key，通过get(key)方法遍历value</p>
+<h5 id="Entry键值对对象"><a href="#Entry键值对对象" class="headerlink" title="Entry键值对对象"></a>Entry键值对对象</h5><p>当Map集合一创建，那么就会在Map集合中创建一个Entry对象，用来记录键与值(键值对对象，键与值的映射关系)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">EntrySet()<span class="hljs-comment">//把map集合内部的多个Entry对象取出来存储到一个Set集合中,再遍历Set集合中的每一个entry对象</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java">Set&lt;Map.Entry&lt;Integer, String&gt;&gt; set = map.entrySet();<br><span class="hljs-type">Iterator</span> <span class="hljs-variable">itrt</span> <span class="hljs-operator">=</span> set.iterator();<br><span class="hljs-keyword">while</span>(itrt.hasNext())&#123;<br>      System.out.println(itrt.next());<br>&#125;<br><span class="hljs-keyword">for</span>(Map.Entry&lt;Integer, String&gt; entry:set)&#123;<br>      System.out.println(entry);<br>&#125;<br></code></pre></td></tr></table></figure></blockquote>
+<h5 id="of-方法"><a href="#of-方法" class="headerlink" title=".of()方法"></a>.of()方法</h5><blockquote>
+<p><img src="/img/cr/Java-SE/55.png" srcset="/img/loading.gif" lazyload></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">List&lt;String&gt; list = List.of(<span class="hljs-string">&quot;a&quot;</span>,<span class="hljs-string">&quot;b&quot;</span>,<span class="hljs-string">&quot;c&quot;</span>,<span class="hljs-string">&quot;d&quot;</span>,<span class="hljs-string">&quot;e&quot;</span>);<br></code></pre></td></tr></table></figure></blockquote>
+<h5 id="Debug"><a href="#Debug" class="headerlink" title="Debug"></a>Debug</h5><blockquote>
+<p><img src="/img/cr/Java-SE/56.png" srcset="/img/loading.gif" lazyload></p>
+<ol>
+<li>f8：逐行执行程序</li>
+<li>f7：进入到方法中</li>
+<li>shift+f8：跳出方法</li>
+<li>f9：跳到下一个断点，如果没有下一个断点，就结束程序</li>
+<li>ctrl+f2：退出debug模式，停止程序</li>
+<li>Console：切换到控制台</li>
+</ol>
+</blockquote>
+<h5 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h5><blockquote>
 <p>异常指的是程序在执行过程中，出现的非正常的情况，最终会导致JVM的非正常停止</p>
 <p>在Java等面向对象的编程语言中，异常本身是一个类，产生异常就是创建异常对象并抛出了一个异常对象(包含了异常产生的内容、原因和位置)。java处理异常的方式是中断出来</p>
 <p>异常指的并不是语法错误，语法错了，编译不通过，不会产生字节码文件，根本不能运行</p>
@@ -306,7 +362,7 @@
 <h5 id="抛出异常throws："><a href="#抛出异常throws：" class="headerlink" title="抛出异常throws："></a>抛出异常throws：</h5><blockquote>
 <p><img src="/img/cr/Java-SE/59.png" srcset="/img/loading.gif" lazyload></p>
 <p>首先必须对方法传递过来的参数进行合法性校验，如果参数不合法，那么我们就必须使用抛出异常的方式，告知方法的调用者，传递的参数有问题</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">if</span>(arr == <span class="hljs-literal">null</span>)&#123;<br>     <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">NullPointerException</span>(<span class="hljs-string">&quot;传递的数组为空&quot;</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">if</span>(arr == <span class="hljs-literal">null</span>)&#123;<br>  <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">NullPointerException</span>(<span class="hljs-string">&quot;传递的数组为空&quot;</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <p>NullPointerException空指针异常、ArrayIndexOutOfBoundsException超出索引异常都是运行期异常，我们不用处理，默认交给JVm处理</p>
 </blockquote>
@@ -317,11 +373,10 @@
 
 <p>如果抛出的多个异常是子类父类关系，直接声明父类异常即可</p>
 <p>调用了声明抛出异常的方法，就必须处理声明的异常</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">sus</span><span class="hljs-params">(String str)</span> <span class="hljs-keyword">throws</span> IOException&#123;<span class="hljs-comment">//IOException是父类，直接用Exception也可以，他是所有异常的父类</span><br>    <span class="hljs-keyword">if</span>(!str.equals(<span class="hljs-string">&quot;c:\\\\a.txt&quot;</span>))&#123;<br>        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">FileNotFoundException</span>(<span class="hljs-string">&quot;&quot;</span>);<br>    &#125;<br>    <span class="hljs-keyword">if</span>(!str.endsWith(<span class="hljs-string">&quot;.txt&quot;</span>))&#123;<br>        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">IOException</span>(<span class="hljs-string">&quot;&quot;</span>);<br>    &#125;<br>&#125;<span class="hljs-comment">//main函数方法定义处也要throw出来这个异常</span><br></code></pre></td></tr></table></figure>
-</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">sus</span><span class="hljs-params">(String str)</span> <span class="hljs-keyword">throws</span> IOException&#123;<span class="hljs-comment">//IOException是父类，直接用Exception也可以，他是所有异常的父类</span><br> <span class="hljs-keyword">if</span>(!str.equals(<span class="hljs-string">&quot;c:\\\\a.txt&quot;</span>))&#123;<br>     <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">FileNotFoundException</span>(<span class="hljs-string">&quot;&quot;</span>);<br> &#125;<br> <span class="hljs-keyword">if</span>(!str.endsWith(<span class="hljs-string">&quot;.txt&quot;</span>))&#123;<br>     <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">IOException</span>(<span class="hljs-string">&quot;&quot;</span>);<br> &#125;<br>&#125;<span class="hljs-comment">//main函数方法定义处也要throw出来这个异常</span><br></code></pre></td></tr></table></figure></blockquote>
 <h5 id="try-catch"><a href="#try-catch" class="headerlink" title="try_catch"></a>try_catch</h5><blockquote>
 <p>自己处理异常，后续代码可以执行</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">try</span>&#123;<br>	可能产生异常的代码<br>&#125;<span class="hljs-keyword">catch</span>(异常类名 变量名(定义一个异常变量，用来接受<span class="hljs-keyword">try</span>中抛出的异常对象)&#123;<br>	异常的处理逻辑，抛出异常对象后，怎么处理异常对象<br>	一般在工作中，会把异常信息记录到一个日志中<br>&#125;<br><span class="hljs-keyword">try</span>&#123;<br>      <span class="hljs-number">111</span>;<br>&#125;<span class="hljs-keyword">catch</span>(Exception e)&#123;<br>      System.out.println(e);<br>&#125;finall&#123;<br>    无论是否存在异常都会执行<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">try</span>&#123;<br>	可能产生异常的代码<br>&#125;<span class="hljs-keyword">catch</span>(异常类名 变量名(定义一个异常变量，用来接受<span class="hljs-keyword">try</span>中抛出的异常对象)&#123;<br>	异常的处理逻辑，抛出异常对象后，怎么处理异常对象<br>	一般在工作中，会把异常信息记录到一个日志中<br>&#125;<br><span class="hljs-keyword">try</span>&#123;<br>   <span class="hljs-number">111</span>;<br>&#125;<span class="hljs-keyword">catch</span>(Exception e)&#123;<br>   System.out.println(e);<br>&#125;finall&#123;<br> 无论是否存在异常都会执行<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <p>try中产生了异常，才会执行异常的处理逻辑</p>
 </blockquote>
@@ -385,8 +440,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Java-SE学习笔记8</div>
-      <div>https://xsuuu.github.io/2025/08/08/Java-SE学习笔记8/</div>
+      <div>Java-SE学习笔记4</div>
+      <div>https://xsuuu.github.io/2025/08/07/Java-SE学习笔记4/</div>
     </div>
     <div class="license-meta">
       
@@ -398,7 +453,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年8月8日</div>
+          <div>2025年8月7日</div>
         </div>
       
       
@@ -430,7 +485,7 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/08/10/Java-SE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B09/" title="Java-SE学习笔记9">
+                      <a href="/2025/08/10/Java-SE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05/" title="Java-SE学习笔记9">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">Java-SE学习笔记9</span>
                         <span class="visible-mobile">上一篇</span>
@@ -440,8 +495,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/08/07/Java-SE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B07/" title="Java-SE学习笔记7">
-                        <span class="hidden-mobile">Java-SE学习笔记7</span>
+                      <a href="/2025/08/04/Java-SE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03/" title="Java-SE学习笔记3">
+                        <span class="hidden-mobile">Java-SE学习笔记3</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

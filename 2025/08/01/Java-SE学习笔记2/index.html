@@ -18,24 +18,24 @@
   <meta name="author" content="xsuuu">
   <meta name="keywords" content="">
   
-    <meta name="description" content="多态(对象的多态性) 12父类名称 对象名 &#x3D; new 子类名称();接口名称 对象名 &#x3D; new 实现类名称();  当父类和子类有相同方法时，看new的是谁实现谁的方法，这里new的是子类，所以实现子类的方法 只有方法能被覆盖重写，成员变量不行，所以使用对象名访问成员变量时，看左边是谁优先用谁，没有则向上找 间接通过成员方法访问成员变量，方法属于谁优先用谁，没有则向上找 成员变量：编译看左边，">
+    <meta name="description" content="Arrays相关函数 toString:将参数数组变成字符串 sort:按照升序排列数组元素(直接在原数组上排序) (如果是自定义的类，需要有Comparable或者Comparator接口的支持)  Math相关函数  四舍五入不带小数点 Math.PI  继承 继承主要解决的问题是：共性抽取 父类也可以叫基类、超类；子类也可以叫派生类 有子用子，无子找父 子类对象  使用父类方法中  调用的数">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java-SE学习笔记4">
-<meta property="og:url" content="https://xsuuu.github.io/2025/08/02/Java-SE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04/index.html">
+<meta property="og:title" content="Java-SE学习笔记2">
+<meta property="og:url" content="https://xsuuu.github.io/2025/08/01/Java-SE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02/index.html">
 <meta property="og:site_name" content="xsuuu&#39;s home">
-<meta property="og:description" content="多态(对象的多态性) 12父类名称 对象名 &#x3D; new 子类名称();接口名称 对象名 &#x3D; new 实现类名称();  当父类和子类有相同方法时，看new的是谁实现谁的方法，这里new的是子类，所以实现子类的方法 只有方法能被覆盖重写，成员变量不行，所以使用对象名访问成员变量时，看左边是谁优先用谁，没有则向上找 间接通过成员方法访问成员变量，方法属于谁优先用谁，没有则向上找 成员变量：编译看左边，">
+<meta property="og:description" content="Arrays相关函数 toString:将参数数组变成字符串 sort:按照升序排列数组元素(直接在原数组上排序) (如果是自定义的类，需要有Comparable或者Comparator接口的支持)  Math相关函数  四舍五入不带小数点 Math.PI  继承 继承主要解决的问题是：共性抽取 父类也可以叫基类、超类；子类也可以叫派生类 有子用子，无子找父 子类对象  使用父类方法中  调用的数">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://xsuuu.github.io/img/bg/5.jpg">
-<meta property="article:published_time" content="2025-08-02T09:29:24.445Z">
-<meta property="article:modified_time" content="2025-08-11T07:42:32.981Z">
+<meta property="og:image" content="https://xsuuu.github.io/img/bg/3.jpg">
+<meta property="article:published_time" content="2025-08-01T07:45:00.941Z">
+<meta property="article:modified_time" content="2026-01-29T06:04:50.537Z">
 <meta property="article:author" content="xsuuu">
 <meta property="article:tag" content="Note">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://xsuuu.github.io/img/bg/5.jpg">
+<meta name="twitter:image" content="https://xsuuu.github.io/img/bg/3.jpg">
   
   
   
-  <title>Java-SE学习笔记4 - xsuuu&#39;s home</title>
+  <title>Java-SE学习笔记2 - xsuuu&#39;s home</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -213,13 +213,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/bg/5.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/img/bg/3.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Java-SE学习笔记4"></span>
+            <span id="subtitle" data-typed-text="Java-SE学习笔记2"></span>
           
         </div>
 
@@ -230,8 +230,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-08-02 17:29" pubdate>
-           2025 年 08 月 02 日 , 下午 05:29 , 星期六
+        <time datetime="2025-08-01 15:45" pubdate>
+           2025 年 08 月 01 日 , 15:45 , 星期五
         </time>
       </span>
     
@@ -243,7 +243,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          1.2k 字
+          2.4k 字
         
       </span>
     
@@ -255,7 +255,7 @@
         
         
           <!-- compatible with older versions-->
-          11 分钟
+          20 分钟
         
       </span>
     
@@ -292,12 +292,83 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Java-SE学习笔记4</h1>
+            <h1 id="seo-header">Java-SE学习笔记2</h1>
             
             
               <div class="markdown-body">
                 
-                <h5 id="多态-对象的多态性"><a href="#多态-对象的多态性" class="headerlink" title="多态(对象的多态性)"></a>多态(对象的多态性)</h5><blockquote>
+                <h5 id="Arrays相关函数"><a href="#Arrays相关函数" class="headerlink" title="Arrays相关函数"></a>Arrays相关函数</h5><blockquote>
+<p>toString:将参数数组变成字符串</p>
+<p>sort:按照升序排列数组元素(直接在原数组上排序)</p>
+<p>(如果是自定义的类，需要有Comparable或者Comparator接口的支持)</p>
+</blockquote>
+<h5 id="Math相关函数"><a href="#Math相关函数" class="headerlink" title="Math相关函数"></a>Math相关函数</h5><blockquote>
+<p><img src="/img/cr/Java-SE/30.png" srcset="/img/loading.gif" lazyload></p>
+<p>四舍五入不带小数点</p>
+<p>Math.PI</p>
+</blockquote>
+<h5 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h5><blockquote>
+<p>继承主要解决的问题是：共性抽取</p>
+<p>父类也可以叫基类、超类；子类也可以叫派生类</p>
+<p>有子用子，无子找父</p>
+<p>子类对象  使用父类方法中  调用的数据是父类的(在父类中定义的)</p>
+<p><img src="/img/cr/Java-SE/31.png" srcset="/img/loading.gif" lazyload></p>
+<p>重写(Override):方法名称和参数列表都一样，重载参数列表不一样(@Override)</p>
+<p>返回值范围：子类方法【小于等于】父类方法</p>
+<p>权限：子类方法【大于等于】父类方法(public&gt;protected&gt;(default)(留空的意思)&gt;private)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-number">111</span>()&#123;<br><span class="hljs-built_in">super</span><span class="hljs-number">.111</span>();<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>子类构造方法中有一个默认隐含的“super()；”调用，所有一定是先执行父类构造，后执行子类构造，且只能有一个super()；调用父类构造方法，且必须是构造方法第一句</p>
+<p>可以通过super关键字  从子类  构造  父类的重载构造</p>
+<p><img src="/img/cr/Java-SE/32.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="/img/cr/Java-SE/33.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="/img/cr/Java-SE/34.png" srcset="/img/loading.gif" lazyload></p>
+<p>单继承、多级继承、多继承</p>
+</blockquote>
+<h5 id="抽象"><a href="#抽象" class="headerlink" title="抽象"></a>抽象</h5><blockquote>
+<p>如果父类中的方法不确定如何实现，就是一个抽象方法</p>
+<p>抽象方法所在的类必须是抽象类，但抽象类中不一定有抽象方法，这种抽象类也不能直接创建对象，在一些特殊场景下有用途</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> class <span class="hljs-number">111</span>&#123;<br> <span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-number">111</span>();<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>不能直接创建抽象类对象，抽象类必须由子类继承后，<strong>将所有抽象方法覆盖重写</strong>(去掉abstarct关键词实现)，如果抽象方法没有全部覆盖重写成非抽象方法，那么这个子类也是抽象类</p>
+<p>抽象父类可以有构造方法，但那是在  创建子类对象时  调用子类构造方法中  的super();时  使用的</p>
+</blockquote>
+<h5 id="发红包问题的分析"><a href="#发红包问题的分析" class="headerlink" title="发红包问题的分析"></a>发红包问题的分析</h5><blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java">发红包的逻辑<br>返回值  ArrayList&lt;Double&gt;<br>名称  send<br>参数列表  ArrayList&lt;Double&gt;<br><br>收红包的逻辑<br>返回值  ArrayList&lt;Double&gt;<br>名称  recieve<br>参数列表  ArrayList&lt;Double&gt;<br><br>用户类：姓名，余额-&gt;群主类：姓名，余额，send;群员类：姓名，余额，id,n(与idCounter类似),recieve<br></code></pre></td></tr></table></figure></blockquote>
+<h5 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h5><blockquote>
+<p>接口就是多个类的公共规范</p>
+<p>接口是一种引用数据类型，最重要的就是其中的抽象方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> interface 接口名称&#123;<br>	<span class="hljs-number">111</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>接口的字节码文件仍然是.class文件</p>
+<p>java7:1.常量  2.抽象方法  java8:3.默认方法  4.静态方法  java9：5.私有方法</p>
+<h5 id="抽象方法"><a href="#抽象方法" class="headerlink" title="抽象方法"></a>抽象方法</h5><p>修饰符必须是两个固定的关键词：public abstract(这两个都可以选择性的省略)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-number">111</span>();<br></code></pre></td></tr></table></figure>
+
+
+
+<h5 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h5><p>1.接口不能直接使用，必须有一个实现类来实现该接口，创建实现类的对象进行使用</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> class 实现类名称 implements 接口名称&#123;<br>	<span class="hljs-number">111</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>2.接口的实现类必须覆盖重写接口中所有的抽象方法，如果实现类没有完全覆盖接口中的抽象方法，这个实现类必须是抽象类</p>
+<p>3.接口不能有静态代码块或者构造方法</p>
+<p>4.一个类的父类是唯一的，但是一个类可以同时实现多个接口</p>
+<p>5.如果接口中有重复的抽象方法，只用覆盖重写一次就行；有重复的默认方法，必须对冲突的默认方法进行覆盖重写</p>
+<p>6.直接父类和接口中的方法产生冲突，优先只 使用父类的方法</p>
+<p>7.类与类单继承，类与接口多实现，接口与接口多继承</p>
+<p><strong>默认方法</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">default</span> 返回值类型 方法名称(参数列表)&#123;<br>	<span class="hljs-number">111</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>默认方法库通过接口实现类对象直接调用，也可以被接口实现类进行覆盖重写</p>
+<h5 id="静态方法"><a href="#静态方法" class="headerlink" title="静态方法"></a>静态方法</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> 返回值类型 方法名称(参数列表)&#123;<br>	<span class="hljs-number">111</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>不能通过接口实现类的对象  来调用接口当中的静态方法，应该使用接口名称调用(不用创建类和对象)</p>
+<h5 id="私有方法-分为默认和静态两种，静态私有方法-解决-多个静态方法之间重复代码-的问题"><a href="#私有方法-分为默认和静态两种，静态私有方法-解决-多个静态方法之间重复代码-的问题" class="headerlink" title="私有方法(分为默认和静态两种，静态私有方法  解决  多个静态方法之间重复代码  的问题)"></a>私有方法(分为默认和静态两种，静态私有方法  解决  多个静态方法之间重复代码  的问题)</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">private</span> (<span class="hljs-keyword">static</span>) 返回值类型 方法名称(参数列表)&#123;<br>	<span class="hljs-number">111</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h5 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h5><p>必须使用public static final三个关键词修饰，可以省略，但是意思不变</p>
+<p>一旦使用final关键字，说明不可改变，也因此该常量必须进行赋值(定义名称规范：INT_NUM)</p>
+</blockquote>
+<h5 id="多态-对象的多态性"><a href="#多态-对象的多态性" class="headerlink" title="多态(对象的多态性)"></a>多态(对象的多态性)</h5><blockquote>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">父类名称 对象名 = <span class="hljs-keyword">new</span> 子类名称();<br>接口名称 对象名 = <span class="hljs-keyword">new</span> 实现类名称();<br></code></pre></td></tr></table></figure>
 
 <p>当父类和子类有相同方法时，<strong>看new的是谁实现谁的方法</strong>，这里new的是子类，所以实现子类的方法</p>
@@ -343,15 +414,15 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-number">2.</span>外部类名称.内部类名称 对象名 = <span class="hljs-keyword">new</span> 外部类名称().new 内部类名称();<br></code></pre></td></tr></table></figure>
 
 <p><img src="/img/cr/Java-SE/36.png" srcset="/img/loading.gif" lazyload></p>
-<h5 id="局部内部类-在方法里面"><a href="#局部内部类-在方法里面" class="headerlink" title="局部内部类(在方法里面)"></a>局部内部类(在方法里面)</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java">修饰符 Class 外部类名称&#123;<br> 修饰符 返回值类型 外部类方法名称(参数列表)&#123;<br>     修饰符 class 内部类名称&#123;<br>			<span class="hljs-number">111</span><br>		&#125;<br>     内部类名称 <span class="hljs-number">111</span> = <span class="hljs-keyword">new</span> 内部类名称();<br> &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h5 id="局部内部类-在方法里面"><a href="#局部内部类-在方法里面" class="headerlink" title="局部内部类(在方法里面)"></a>局部内部类(在方法里面)</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java">修饰符 Class 外部类名称&#123;<br>修饰符 返回值类型 外部类方法名称(参数列表)&#123;<br>  修饰符 class 内部类名称&#123;<br>			<span class="hljs-number">111</span><br>		&#125;<br>  内部类名称 <span class="hljs-number">111</span> = <span class="hljs-keyword">new</span> 内部类名称();<br>&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <p><img src="/img/cr/Java-SE/37.png" srcset="/img/loading.gif" lazyload></p>
 <p>局部内部类，如果希望访问所在方法的局部变量，这个局部变量必须是<strong>有效final</strong>的(不能改变)</p>
 <p>(从java8+开始，只要局部变量事实不变，那么final关键字可以省略)</p>
 <p>原因：1.new出来的对象在<strong>堆内存</strong>中，垃圾回收才会消失</p>
 <p>​	   2.局部变量跟着方法走，而方法在<strong>栈内存</strong>中，方法运行入栈，运行结束出栈，局部变量就	      会立即消失</p>
-<h5 id="匿名内部类-局部内部类中的"><a href="#匿名内部类-局部内部类中的" class="headerlink" title="匿名内部类(局部内部类中的)"></a><strong>匿名内部类</strong>(局部内部类中的)</h5><p>如果接口的实现类(或者父类的子类)只需要使用唯一的一次，就可以忽略该类的定义，使用匿名内部类</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java">接口名称 对象名 = <span class="hljs-keyword">new</span> 接口名称()&#123;<br> <span class="hljs-comment">//覆盖重写所有抽象方法</span><br>&#125;;<span class="hljs-comment">//匿名内部类</span><br><span class="hljs-keyword">new</span> 接口名称()&#123;<br> 修饰符 返回值类型 <span class="hljs-number">111</span>()&#123;<br>     <span class="hljs-number">111</span><br> &#125;<br>&#125;<span class="hljs-number">.111</span>();<span class="hljs-comment">//匿名内部类，也是匿名对象</span><br></code></pre></td></tr></table></figure>
+<h5 id="匿名内部类-局部内部类中的"><a href="#匿名内部类-局部内部类中的" class="headerlink" title="匿名内部类(局部内部类中的)"></a>匿名内部类(局部内部类中的)</h5><p>如果接口的实现类(或者父类的子类)只需要使用唯一的一次，就可以忽略该类的定义，使用匿名内部类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java">接口名称 对象名 = <span class="hljs-keyword">new</span> 接口名称()&#123;<br><span class="hljs-comment">//覆盖重写所有抽象方法</span><br>&#125;;<span class="hljs-comment">//匿名内部类</span><br><span class="hljs-keyword">new</span> 接口名称()&#123;<br>修饰符 返回值类型 <span class="hljs-number">111</span>()&#123;<br>  <span class="hljs-number">111</span><br>&#125;<br>&#125;<span class="hljs-number">.111</span>();<span class="hljs-comment">//匿名内部类，也是匿名对象</span><br></code></pre></td></tr></table></figure>
 
 <p><strong>注意不要丢了分号</strong></p>
 <p><img src="/img/cr/Java-SE/38.png" srcset="/img/loading.gif" lazyload></p>
@@ -416,8 +487,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Java-SE学习笔记4</div>
-      <div>https://xsuuu.github.io/2025/08/02/Java-SE学习笔记4/</div>
+      <div>Java-SE学习笔记2</div>
+      <div>https://xsuuu.github.io/2025/08/01/Java-SE学习笔记2/</div>
     </div>
     <div class="license-meta">
       
@@ -429,7 +500,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年8月2日</div>
+          <div>2025年8月1日</div>
         </div>
       
       
@@ -461,9 +532,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/08/04/Java-SE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05/" title="Java-SE学习笔记5">
+                      <a href="/2025/08/04/Java-SE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03/" title="Java-SE学习笔记3">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Java-SE学习笔记5</span>
+                        <span class="hidden-mobile">Java-SE学习笔记3</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -471,8 +542,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/08/01/Java-SE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03/" title="Java-SE学习笔记3">
-                        <span class="hidden-mobile">Java-SE学习笔记3</span>
+                      <a href="/2025/07/27/Java-SE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/" title="Java-SE学习笔记1">
+                        <span class="hidden-mobile">Java-SE学习笔记1</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

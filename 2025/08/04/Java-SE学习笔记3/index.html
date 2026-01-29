@@ -18,24 +18,24 @@
   <meta name="author" content="xsuuu">
   <meta name="keywords" content="">
   
-    <meta name="description" content="泛型 一种未知的数据类型，当我们不知道使用什么数据类型，就可以使用泛型 泛型也可以看做是一个变量，用来接受数据类型 E e:Element 元素         T t:Type 类型 创建集合对象，不使用泛型：默认类型是Object类型，可存储任意类型的数据；不安全，会引发异常 1ArrayList list &#x3D; new ArrayList();&#x2F;&#x2F;不写尖括号就是默认Object类型   123">
+    <meta name="description" content="Object类(java.lang.object) 所有类的父类，所有类都可以使用Object类中的方法 都可以code+generate,自动生成@Override toString 直接打印对象的名字，就是调用toString方法 scanner和ArrayList重写了toString方法，所以打印出来的东西不是地址值 equals 基本类型不能比较，引用类型比较地址值(a1.equals(">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java-SE学习笔记6">
-<meta property="og:url" content="https://xsuuu.github.io/2025/08/05/Java-SE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B06/index.html">
+<meta property="og:title" content="Java-SE学习笔记3">
+<meta property="og:url" content="https://xsuuu.github.io/2025/08/04/Java-SE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03/index.html">
 <meta property="og:site_name" content="xsuuu&#39;s home">
-<meta property="og:description" content="泛型 一种未知的数据类型，当我们不知道使用什么数据类型，就可以使用泛型 泛型也可以看做是一个变量，用来接受数据类型 E e:Element 元素         T t:Type 类型 创建集合对象，不使用泛型：默认类型是Object类型，可存储任意类型的数据；不安全，会引发异常 1ArrayList list &#x3D; new ArrayList();&#x2F;&#x2F;不写尖括号就是默认Object类型   123">
+<meta property="og:description" content="Object类(java.lang.object) 所有类的父类，所有类都可以使用Object类中的方法 都可以code+generate,自动生成@Override toString 直接打印对象的名字，就是调用toString方法 scanner和ArrayList重写了toString方法，所以打印出来的东西不是地址值 equals 基本类型不能比较，引用类型比较地址值(a1.equals(">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://xsuuu.github.io/img/bg/7.jpg">
-<meta property="article:published_time" content="2025-08-05T12:43:44.253Z">
-<meta property="article:modified_time" content="2025-08-11T07:44:47.002Z">
+<meta property="og:image" content="https://xsuuu.github.io/img/bg/4.jpg">
+<meta property="article:published_time" content="2025-08-04T08:08:00.850Z">
+<meta property="article:modified_time" content="2026-01-29T06:05:56.244Z">
 <meta property="article:author" content="xsuuu">
 <meta property="article:tag" content="Note">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://xsuuu.github.io/img/bg/7.jpg">
+<meta name="twitter:image" content="https://xsuuu.github.io/img/bg/4.jpg">
   
   
   
-  <title>Java-SE学习笔记6 - xsuuu&#39;s home</title>
+  <title>Java-SE学习笔记3 - xsuuu&#39;s home</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -213,13 +213,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/bg/7.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/img/bg/4.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Java-SE学习笔记6"></span>
+            <span id="subtitle" data-typed-text="Java-SE学习笔记3"></span>
           
         </div>
 
@@ -230,8 +230,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-08-05 20:43" pubdate>
-           2025 年 08 月 05 日 , 晚上 08:43 , 星期二
+        <time datetime="2025-08-04 16:08" pubdate>
+           2025 年 08 月 04 日 , 16:08 , 星期一
         </time>
       </span>
     
@@ -243,7 +243,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          1k 字
+          2.1k 字
         
       </span>
     
@@ -255,7 +255,7 @@
         
         
           <!-- compatible with older versions-->
-          9 分钟
+          18 分钟
         
       </span>
     
@@ -292,12 +292,107 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Java-SE学习笔记6</h1>
+            <h1 id="seo-header">Java-SE学习笔记3</h1>
             
             
               <div class="markdown-body">
                 
-                <h5 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h5><blockquote>
+                <h5 id="Object类-java-lang-object"><a href="#Object类-java-lang-object" class="headerlink" title="Object类(java.lang.object)"></a>Object类(java.lang.object)</h5><blockquote>
+<p>所有类的父类，所有类都可以使用Object类中的方法</p>
+<p>都可以code+generate,自动生成@Override</p>
+<p><strong>toString</strong></p>
+<p>直接打印对象的名字，就是调用toString方法</p>
+<p>scanner和ArrayList重写了toString方法，所以打印出来的东西不是地址值</p>
+<p><strong>equals</strong></p>
+<p>基本类型不能比较，引用类型比较地址值(a1.equals(a2)),返回布尔值</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">getClass() != o.getClass()<span class="hljs-comment">//判断是否与当前类的类型相同</span><br></code></pre></td></tr></table></figure>
+
+<p>Objects类的equals方法：在对两个对象进行比较时，防止空指针异常</p>
+<p>(a1.equals(a2) 当a1为null值时，就会发生空指针异常，NullPointerException)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">equals</span><span class="hljs-params">(Object a, Object b)</span> &#123;<br>        <span class="hljs-keyword">return</span> (a == b) || (a != <span class="hljs-literal">null</span> &amp;&amp; a.equals(b));<br>    &#125;<br></code></pre></td></tr></table></figure></blockquote>
+<h5 id="日期时间类-java-util-date"><a href="#日期时间类-java-util-date" class="headerlink" title="日期时间类(java.util.date)"></a>日期时间类(java.util.date)</h5><blockquote>
+<p><strong>Date</strong></p>
+<p>表示特定的瞬间，精确到毫秒</p>
+<p>时间原点(0毫秒)：1970年1月1日 00:00:00(英国格林威治)(中国是东八区，要加八个小时)</p>
+<p><strong>System.currentTimeMills()</strong>：获取当前时间(毫秒)(long类型)</p>
+<p>一天 &#x3D; 24<em>60</em>60 &#x3D; 86400秒 * 1000 &#x3D; 86400000毫秒</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">Date</span> <span class="hljs-variable">date</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>();<span class="hljs-comment">//以下时间函数的使用需要创建对象</span><br></code></pre></td></tr></table></figure>
+
+<p><strong>Date()</strong>:获取当前系统的日期和时间</p>
+<p><strong>Date(long date)</strong>:传递毫秒值，把毫秒值转换为Date日期</p>
+<p><strong>long getTime()</strong>:把日期转换为毫秒值(相当于System.currentTimeMills()方法)，返回自时间原点以来的毫秒值</p>
+<p><strong>DateFormat(java.text.DateFormat)</strong>(抽象类)(直接已知子类：SimpleDateFormat)</p>
+<blockquote>
+<p>方法format：把日期格式转换为文本</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">SimpleDateFormat</span> <span class="hljs-variable">sdf</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">SimpleDateFormat</span>(<span class="hljs-string">&quot;yyyy-MM-dd,HH:mm:ss&quot;</span>);<br></code></pre></td></tr></table></figure>
+
+<p>方法parse:把文本解析为日期</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> Date <span class="hljs-title function_">parse</span><span class="hljs-params">(String source)</span> <span class="hljs-keyword">throws</span> ParseException<br></code></pre></td></tr></table></figure>
+
+<p>如果字符串和构造方法的博士不一样，程序就会抛出解析异常，要么throws继续抛出，要么try catch自己处理</p>
+<p>红线异常用alt+enter抛出异常</p>
+</blockquote>
+<h5 id="Calendar-java-util-Calendar-抽象类"><a href="#Calendar-java-util-Calendar-抽象类" class="headerlink" title="Calendar(java.util.Calendar)(抽象类)"></a>Calendar(java.util.Calendar)(抽象类)</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">Calendar <span class="hljs-number">111</span> = Calendar.getInstance();<br></code></pre></td></tr></table></figure>
+
+<p><img src="/img/cr/Java-SE/39.png" srcset="/img/loading.gif" lazyload></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span> <span class="hljs-variable">month</span> <span class="hljs-operator">=</span> c.get(Calendar.MONTH);<br></code></pre></td></tr></table></figure>
+
+<p>西方的月份是0-11月</p>
+<p>set的一个重载方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">c.set(<span class="hljs-number">2019</span>,<span class="hljs-number">11</span>,<span class="hljs-number">12</span>);<span class="hljs-comment">//同时设置</span><br></code></pre></td></tr></table></figure>
+
+<p>add方法的第二个参数，如果是正数就是加，负数就是减</p>
+</blockquote>
+<h5 id="System类-java-lang-System"><a href="#System类-java-lang-System" class="headerlink" title="System类(java.lang.System)"></a>System类(java.lang.System)</h5><blockquote>
+<p><strong>System.currentTimeMills()</strong>：获取当前时间(毫秒)(long类型)</p>
+<p>可以测试程序的效率</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">System.arraycopy(src, srcPos, dest, destPos, length);<br></code></pre></td></tr></table></figure>
+
+<p>src - 源数组。<br>srcPos - 源数组中的起始位置。<br>dest - 目标数组。<br>destPos - 目标数据中的起始位置。<br>length - 要复制的数组元素的数量。 </p>
+</blockquote>
+<h5 id="StringBuilder类-字符串缓冲区"><a href="#StringBuilder类-字符串缓冲区" class="headerlink" title="StringBuilder类(字符串缓冲区)"></a>StringBuilder类(字符串缓冲区)</h5><blockquote>
+<p>字符串是常量；它们的值在创建之后不能更改。字符串缓冲区支持可变的字符串。因为 String 对象是不可变的，所以可以共享。</p>
+<p><img src="/img/cr/Java-SE/40.png" srcset="/img/loading.gif" lazyload></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">StringBuilder</span> <span class="hljs-variable">sb</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">StringBuilder</span>(<span class="hljs-number">111</span>);<span class="hljs-comment">//无数据或者初始化字符串</span><br>sb.append(<span class="hljs-number">111</span>);<span class="hljs-comment">//可以添加任意内容</span><br>sb.toString(<span class="hljs-number">111</span>);<span class="hljs-comment">//StringBuilder转换为字符串，反转则是new StringBuilder(111);</span><br></code></pre></td></tr></table></figure>
+
+<p>链式编程，可以一直.append()下去</p>
+</blockquote>
+<h5 id="包装类"><a href="#包装类" class="headerlink" title="包装类"></a>包装类</h5><blockquote>
+<p><img src="/img/cr/Java-SE/41.png" srcset="/img/loading.gif" lazyload></p>
+<p>111.intValue();</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">Integer</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">1</span>;<span class="hljs-comment">//自动装箱</span><br>i = i + <span class="hljs-number">2</span>;<span class="hljs-comment">//自动拆箱</span><br></code></pre></td></tr></table></figure>
+
+<p>ArrayList的.add()函数和.get()函数，其实就是自动装箱和自动拆箱</p>
+<p><img src="/img/cr/Java-SE/42.png" srcset="/img/loading.gif" lazyload></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">Integer.toString(<span class="hljs-number">111</span>);String.valueOf(<span class="hljs-number">111</span>);<br>Integer.parseInt(<span class="hljs-number">111</span>);<br></code></pre></td></tr></table></figure></blockquote>
+<h5 id="Collection集合"><a href="#Collection集合" class="headerlink" title="Collection集合"></a>Collection集合</h5><blockquote>
+<p>数组长度固定，集合长度可变</p>
+<p>数组存储同一类型袁术，存储基本数据类型；集合存储对象，对象类型不一致</p>
+<p><img src="/img/cr/Java-SE/43.png" srcset="/img/loading.gif" lazyload></p>
+</blockquote>
+<h5 id="Collection常用功能"><a href="#Collection常用功能" class="headerlink" title="Collection常用功能"></a>Collection常用功能</h5><blockquote>
+<p><img src="/img/cr/Java-SE/44.png" srcset="/img/loading.gif" lazyload></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">Collection&lt;String&gt; coll = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;();<br>Object[] strArray = coll.toArray();<br></code></pre></td></tr></table></figure>
+
+<p>remove函数只移除找到的第一个对象</p>
+<p><strong>遍历方法</strong>：for循环、Iterator迭代器、增强for循环。无索引的集合不能用for循环</p>
+</blockquote>
+<h5 id="Iterator迭代器-111-Iterator-var"><a href="#Iterator迭代器-111-Iterator-var" class="headerlink" title="Iterator迭代器(111.Iterator().var)"></a>Iterator迭代器(111.Iterator().var)</h5><blockquote>
+<p><strong>迭代</strong>：即Collection集合元素的通用获取方式。在区元素之前先判断集合中有没有元素，如果有，取元素，继续判断，继续取元素，一直到把集合中所有的元素全部取出</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java">Collection&lt;Integer&gt; coll = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;();<br>        Iterator&lt;Integer&gt; itrt = coll.iterator();<br>        <span class="hljs-keyword">while</span>(itrt.hasNext())&#123;<br>            System.out.print(itrt.next()+<span class="hljs-string">&quot; &quot;</span>);<br>        &#125;<br></code></pre></td></tr></table></figure>
+
+<p>创建iterator的实现类对象时，会把指针指向集合的-1索引</p>
+<p>hasnext()判断集合有没有下一个元素，next()做了两件事情：1.取出下一个元素  2.把指针向后移动一位</p>
+</blockquote>
+<h5 id="增强for循环-111-for"><a href="#增强for循环-111-for" class="headerlink" title="增强for循环(111.for)"></a>增强for循环(111.for)</h5><blockquote>
+<p>也称for each循环，内部原理是Iterator迭代器，所以在遍历的过程中，不能对集合中的元素进行增删操作</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">for</span>(集合/数组的数据类型 变量名：集合名/数组名)&#123;<br>	sout(变量名);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">for</span>(String i:coll)&#123;<br>            System.out.println(i);<br>        &#125;<br></code></pre></td></tr></table></figure>
+
+<p>新for循环必须有被遍历的目标，目标只能是Collection或者数组</p>
+</blockquote>
+<h5 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h5><blockquote>
 <p>一种未知的数据类型，当我们不知道使用什么数据类型，就可以使用泛型</p>
 <p>泛型也可以看做是一个变量，用来接受数据类型</p>
 <p>E e:Element 元素         T t:Type 类型</p>
@@ -305,11 +400,11 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">ArrayList</span> <span class="hljs-variable">list</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>();<span class="hljs-comment">//不写尖括号就是默认Object类型</span><br></code></pre></td></tr></table></figure>
 
 <p><img src="/img/cr/Java-SE/45.png" srcset="/img/loading.gif" lazyload></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> class <span class="hljs-number">111</span>&lt;E&gt;&#123;&#125;<span class="hljs-comment">//泛型类</span><br><span class="hljs-keyword">public</span> &lt;M&gt; <span class="hljs-keyword">void</span> <span class="hljs-title function_">method1</span><span class="hljs-params">(M m)</span>&#123;&#125;<span class="hljs-comment">//泛型方法</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> &lt;S&gt; <span class="hljs-keyword">void</span> <span class="hljs-title function_">method2</span><span class="hljs-params">(S s)</span>&#123;&#125;<span class="hljs-comment">//泛型静态方法</span><br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">GenericInter</span>&lt;I&gt; &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">method</span><span class="hljs-params">(I i)</span>;<span class="hljs-comment">//泛型接口的实现类有两种实现方法</span><br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">GenericInterImp</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">GenericInter</span>&lt;String&gt;<span class="hljs-comment">//一种是在类的实现时就定义数据类型</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">GenericInterImp2</span>&lt;I&gt; <span class="hljs-keyword">implements</span> <span class="hljs-title class_">GenericInter</span>&lt;I&gt;<span class="hljs-comment">//一种是在类的实现时不定义数据类型，使用时才定义数据类型</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> class <span class="hljs-number">111</span>&lt;E&gt;&#123;&#125;<span class="hljs-comment">//泛型类</span><br><span class="hljs-keyword">public</span> &lt;M&gt; <span class="hljs-keyword">void</span> <span class="hljs-title function_">method1</span><span class="hljs-params">(M m)</span>&#123;&#125;<span class="hljs-comment">//泛型方法</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> &lt;S&gt; <span class="hljs-keyword">void</span> <span class="hljs-title function_">method2</span><span class="hljs-params">(S s)</span>&#123;&#125;<span class="hljs-comment">//泛型静态方法</span><br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">GenericInter</span>&lt;I&gt; &#123;<br> <span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">method</span><span class="hljs-params">(I i)</span>;<span class="hljs-comment">//泛型接口的实现类有两种实现方法</span><br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">GenericInterImp</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">GenericInter</span>&lt;String&gt;<span class="hljs-comment">//一种是在类的实现时就定义数据类型</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">GenericInterImp2</span>&lt;I&gt; <span class="hljs-keyword">implements</span> <span class="hljs-title class_">GenericInter</span>&lt;I&gt;<span class="hljs-comment">//一种是在类的实现时不定义数据类型，使用时才定义数据类型</span><br></code></pre></td></tr></table></figure>
 
 <h5 id="泛型通配符"><a href="#泛型通配符" class="headerlink" title="泛型通配符"></a>泛型通配符</h5><p>不知道使用什么类型来接收时，可以使用？，？代表未知通配符</p>
 <p>只能接受数据，不能往集合中存储数据(只能作为参数传递，不能在创建数据时使用)</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">method</span><span class="hljs-params">(ArrayList&lt;?&gt; array)</span>&#123;<br>        Iterator&lt;?&gt; itrt = array.iterator();<br>    &#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">method</span><span class="hljs-params">(ArrayList&lt;?&gt; array)</span>&#123;<br>     Iterator&lt;?&gt; itrt = array.iterator();<br> &#125;<br></code></pre></td></tr></table></figure>
 
 <h5 id="通配符高级使用：受限泛型"><a href="#通配符高级使用：受限泛型" class="headerlink" title="通配符高级使用：受限泛型"></a>通配符高级使用：受限泛型</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">类型名称 &lt;? extends 类&gt; 对象名称<span class="hljs-comment">//泛型上限：只能接受该类型及其子类</span><br>类型名称 &lt;? <span class="hljs-built_in">super</span> 类&gt; 对象名称<span class="hljs-comment">//泛型下限：只能接受该类型及其父类</span><br></code></pre></td></tr></table></figure>
 
@@ -410,8 +505,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Java-SE学习笔记6</div>
-      <div>https://xsuuu.github.io/2025/08/05/Java-SE学习笔记6/</div>
+      <div>Java-SE学习笔记3</div>
+      <div>https://xsuuu.github.io/2025/08/04/Java-SE学习笔记3/</div>
     </div>
     <div class="license-meta">
       
@@ -423,7 +518,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年8月5日</div>
+          <div>2025年8月4日</div>
         </div>
       
       
@@ -455,9 +550,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/08/07/Java-SE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B07/" title="Java-SE学习笔记7">
+                      <a href="/2025/08/07/Java-SE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04/" title="Java-SE学习笔记4">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Java-SE学习笔记7</span>
+                        <span class="hidden-mobile">Java-SE学习笔记4</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -465,8 +560,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/08/04/Java-SE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05/" title="Java-SE学习笔记5">
-                        <span class="hidden-mobile">Java-SE学习笔记5</span>
+                      <a href="/2025/08/01/Java-SE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02/" title="Java-SE学习笔记2">
+                        <span class="hidden-mobile">Java-SE学习笔记2</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
